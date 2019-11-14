@@ -16,11 +16,11 @@ $config = [
     /*
      * For best interoperability it is recommend to use only alphanumeric characters when specifying an application ID.
      */
-    'id' => 'myproject',
+    'id' => 'domicc',
     /*
      * The name of your site, will be display on the login screen
      */
-    'siteTitle' => 'My Project',
+    'siteTitle' => 'domi.cc - Dominik Haßelkuss',
     /*
      * Let the application know which module should be executed by default (if no url is set). This module must be included
      * in the modules section. In the most cases you are using the cms as default handler for your website. But the concept
@@ -83,7 +83,7 @@ $config = [
          */
         'composition' => [
             'hidden' => true, // no languages in your url (most case for pages which are not multi lingual)
-            'default' => ['langShortCode' => 'en'], // the default language for the composition should match your default language shortCode in the language table.
+            'default' => ['langShortCode' => 'de'], // the default language for the composition should match your default language shortCode in the language table.
         ],
         /*
          * If cache is enabled LUYA will cache cms blocks and speed up the system in different ways. In the prep config
