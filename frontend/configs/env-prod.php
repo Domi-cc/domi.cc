@@ -22,6 +22,19 @@
  * In production environemtn `YII_ENV` is by default set to `prod` and `YII_DEBUG` is false by default.
  */
 
-return [
-    // Use the env-prep.php or env-local.php config and change the configs to match your prod enviroment settings and added env specific informations (database, caching, etc.)
+// Use the env-prep.php or env-local.php config and change the configs to match your prod enviroment settings and added env specific informations (database, caching, etc.)
+
+$config = require __DIR__ . '/env-local.php';
+
+$config['components']['db'] = [
+    'class' => 'yii\db\Connection',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=domi_luya',
+    'username' => 'domi',
+    'password' => 'gOBfFREXyk',
+    'charset' => 'utf8',
+    'enableSchemaCache' => true,
+    'schemaCacheDuration' => 43200,
 ];
+
+return $config;
+
