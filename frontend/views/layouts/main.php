@@ -66,19 +66,8 @@ $this->beginPage();
                 <?php endforeach; ?>
             </ol>
         </nav>
-        <!-- /* DELETE ME -->    
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-success" role="alert">
-                    <?= Yii::t('app', 'kickstarter_success'); ?>
-                    <hr>
-                    <p class="mb-0">
-                        <?= Yii::t('app', 'kickstarter_admin_link', ['link' => Url::toInternal(['admin/default/index']), true]); ?>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- DELETE ME */ -->
+
+
         <div class="row">
             <?php if (count(Yii::$app->menu->getLevelContainer(2)) > 0): ?>
             <div class="col-md-3">
