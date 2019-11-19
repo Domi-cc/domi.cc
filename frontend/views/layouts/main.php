@@ -33,7 +33,7 @@ $this->beginPage();
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?= $this->publicHtml; ?>">
-                        <img alt="luya.io-kickstarter" src="<?= $this->publicHtml; ?>/images/logo/0.2x/luya_logo@0.2x.png" height="20px" width="auto">
+                        <img alt="domi.cc" src="<?= $this->publicHtml; ?>/images/logo/0.2x/luya_logo@0.2x.png" height="20px" width="auto">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,6 +57,7 @@ $this->beginPage();
         </nav>
     </div>
     <div class="container">
+
         <nav aria-label="breadcrumb mb-3">
             <ol class="breadcrumb">
                 <?php foreach (Yii::$app->menu->current->teardown as $item): /* @var $item \luya\cms\menu\Item */ ?>
@@ -90,10 +91,12 @@ $this->beginPage();
     <footer class="footer">
         <div class="container">
                 <ul>
-                    <li>This website is made with <a href="https://luya.io" target="_blank">LUYA</a></li>
+                    <li>Domi.cc is made with <a href="https://www.yiiframework.com/" target="_blank">YII</a> & <a href="https://luya.io" target="_blank">LUYA</a></li>
+                    <?php /*
                     <li><a href="https://github.com/luyadev/luya" target="_blank"><i class="fa fa-github"></i></a></li>
                     <li><a href="https://twitter.com/luyadev" target="_blank"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="https://www.youtube.com/channel/UCfGs4sHk-D3swX0mhxv98RA" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                    */ ?>
                 </ul>
         </div>
     </footer>
