@@ -136,3 +136,69 @@
   }
   @keyframes blink { 50% { opacity: 0; } }
 }
+
+@layer components {
+  .manifesto p { font-size: var(--step-2); color: var(--fg); }
+  .manifesto p + p { margin-top: 1rem; }
+
+  .services-grid {
+    display: grid; gap: 1px; background: var(--line); margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .services-grid > article {
+    background: var(--bg); padding: 2rem; min-height: 220px;
+  }
+  .services-grid h3 {
+    font-family: var(--font-mono); font-size: var(--step-1); color: var(--amber);
+    font-weight: 400; margin-bottom: .75rem;
+  }
+
+  .ansilume {
+    background: linear-gradient(180deg, var(--bg) 0%, #0c1520 100%);
+    border-block: 1px solid var(--cyan);
+    text-align: center;
+  }
+  .ansilume-kicker {
+    display: inline-block; font-family: var(--font-mono); font-size: .8rem;
+    color: var(--cyan); letter-spacing: .3em; text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .ansilume-logo {
+    font-family: var(--font-mono); font-size: var(--step-5);
+    color: var(--cyan); margin: 0 0 1.5rem; letter-spacing: -0.04em;
+    text-shadow: 0 0 24px rgba(125, 252, 205, 0.35);
+    border: 0; padding: 0;
+    animation: ansilume-pulse 4s ease-in-out infinite;
+  }
+  @keyframes ansilume-pulse {
+    0%, 100% { text-shadow: 0 0 16px rgba(125, 252, 205, 0.35); }
+    50%      { text-shadow: 0 0 32px rgba(125, 252, 205, 0.6); }
+  }
+  .ansilume p { margin: 0 auto 2rem; max-width: 60ch; }
+  .ansilume-cta {
+    display: inline-block; padding: .75rem 1.5rem;
+    border: 1px solid var(--cyan); color: var(--cyan);
+    font-family: var(--font-mono); text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+  .ansilume-cta:hover { background: var(--cyan); color: var(--bg); }
+
+  .portrait {
+    display: grid; place-items: center; padding-block: 4rem;
+  }
+  .portrait picture {
+    position: relative; max-width: 420px;
+    filter: grayscale(100%) contrast(1.1);
+    mix-blend-mode: luminosity;
+  }
+  .portrait img {
+    width: 100%; height: auto;
+  }
+  .portrait picture::after {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      0deg, rgba(0,0,0,0) 0 2px, rgba(0,0,0,0.12) 2px 3px
+    );
+    pointer-events: none;
+  }
+}
