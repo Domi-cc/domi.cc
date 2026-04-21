@@ -36,11 +36,18 @@ describe('content data', () => {
   it('ansilume station has a special flag', () => {
     const de = content.de.timeline.find((s) => s.ansilume);
     expect(de).toBeDefined();
-    expect(de.githubUrl).toBe('https://github.com/ansilume/ansilume');
+    expect(de.url).toBe('https://github.com/ansilume/ansilume');
   });
 
   it('SÜ1 station has a clearance flag', () => {
     const de = content.de.timeline.find((s) => s.clearance === 'SÜ1');
     expect(de).toBeDefined();
+  });
+
+  it('every timeline station has the same key set in de and en', () => {
+    const keys = (s) => Object.keys(s).sort().join(',');
+    content.de.timeline.forEach((deStation, i) => {
+      expect(keys(content.en.timeline[i])).toBe(keys(deStation));
+    });
   });
 });

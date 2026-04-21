@@ -106,7 +106,7 @@ export const content = {
       paragraphs: [
         'I build, harden and automate the infrastructure that large organisations depend on.',
         'I lead teams, take interim responsibility, and hand over cleanly once the shop runs.',
-        'When it is urgent and nobody else can — call me.',
+        'When it is urgent and no one else can figure it out — call me.',
       ],
     },
     services: {
@@ -115,7 +115,7 @@ export const content = {
         { title: 'Monitoring & Observability', body: 'Prometheus, Grafana, Loki, Icinga, Splunk — from greenfield stacks to HA-migrations of legacy estates.' },
         { title: 'Automation & IaC', body: 'Ansible end-to-end: rollout, hardening, on-/offboarding. GitLab pipelines. Training included.' },
         { title: 'Security & Hardening', body: 'CIS hardening, SSH/Apache/OS baselines, SIEM wiring, log pipelines. SÜ1, ready for SÜ2.' },
-        { title: 'Leadership & Interim', body: 'CTO role on time. Team build-up, demand and backlog management, clean handover.' },
+        { title: 'Leadership & Interim', body: 'Fractional CTO on demand. Team build-up, demand and backlog management, clean handover.' },
       ],
     },
     ansilume: {
@@ -184,7 +184,7 @@ export const content = {
 const STATIONS = [
   {
     ansilume: true,
-    githubUrl: 'https://github.com/ansilume/ansilume',
+    url: 'https://github.com/ansilume/ansilume',
     role: { de: 'DevOps & Automation Engineer', en: 'DevOps & Automation Engineer' },
     industry: { de: 'Open Source — ansilume', en: 'Open Source — ansilume' },
     highlights: {
@@ -266,7 +266,7 @@ const STATIONS = [
   },
   {
     role: { de: 'Business Analyst', en: 'Business Analyst' },
-    industry: { de: 'Startup/Scale-up', en: 'Startup/scale-up' },
+    industry: { de: 'Startup/Scale-up (Beratung)', en: 'Startup/scale-up (advisory)' },
     highlights: {
       de: ['Product Owner & Scrum Master', 'EMEA-Internationalisierung', 'Debian-Cluster, AWS'],
       en: ['Product Owner & Scrum Master', 'EMEA internationalisation', 'Debian cluster, AWS'],
@@ -293,7 +293,7 @@ const STATIONS = [
   },
   {
     role: { de: 'Business Analyst', en: 'Business Analyst' },
-    industry: { de: 'Startup/Scale-up', en: 'Startup/scale-up' },
+    industry: { de: 'Startup/Scale-up (Produkt)', en: 'Startup/scale-up (product)' },
     highlights: {
       de: ['Product Ownership & Scrum Master', 'Backlog Management', 'EMEA'],
       en: ['Product ownership & Scrum Master', 'Backlog management', 'EMEA'],
@@ -336,7 +336,7 @@ const STATIONS = [
   },
   {
     role: { de: 'Interims-Geschäftsführer', en: 'Interim MD' },
-    industry: { de: 'Agentur / Scale-up', en: 'Agency / scale-up' },
+    industry: { de: 'Interim-GF (Agentur / Scale-up)', en: 'Interim MD (agency / scale-up)' },
     highlights: {
       de: ['Team von 3 auf 15 Mitarbeiter aufgebaut', 'Konflikt- und Beschwerdemanagement etabliert', 'AWS-Architektur und Backup'],
       en: ['Grew the team from 3 to 15', 'Established conflict and complaint management', 'AWS architecture and backups'],
@@ -372,7 +372,7 @@ const STATIONS = [
   },
   {
     role: { de: '(Senior) PHP-Developer', en: '(Senior) PHP developer' },
-    industry: { de: 'Pharma / Bau', en: 'Pharma / construction' },
+    industry: { de: 'Senior-Entwicklung (Pharma/Bau)', en: 'Senior development (pharma/construction)' },
     highlights: {
       de: ['Teamleitung Entwickler-Team', 'PHP / Zend / HTML / CSS / JS / MySQL'],
       en: ['Lead developer team', 'PHP / Zend / HTML / CSS / JS / MySQL'],
@@ -390,7 +390,7 @@ const STATIONS = [
   },
   {
     role: { de: 'Werkstudent', en: 'Working student' },
-    industry: { de: 'Automotive-Konzern', en: 'Automotive OEM' },
+    industry: { de: 'Werkstudent (Automotive-Konzern)', en: 'Working student (automotive OEM)' },
     highlights: {
       de: ['Mitarbeiterqualifikations-Matrix (Q-Matrix)', 'Abfragen, Auswertungen'],
       en: ['Employee qualification matrix (Q-Matrix)', 'Surveys and reporting'],
@@ -404,7 +404,7 @@ content.de.timeline = STATIONS.map((s) => ({
   industry: s.industry.de,
   highlights: s.highlights.de,
   stack: s.stack,
-  ...(s.ansilume && { ansilume: true, githubUrl: s.githubUrl }),
+  ...(s.ansilume && { ansilume: true, url: s.url }),
   ...(s.clearance && { clearance: s.clearance }),
 }));
 content.en.timeline = STATIONS.map((s) => ({
@@ -412,6 +412,6 @@ content.en.timeline = STATIONS.map((s) => ({
   industry: s.industry.en,
   highlights: s.highlights.en,
   stack: s.stack,
-  ...(s.ansilume && { ansilume: true, githubUrl: s.githubUrl }),
+  ...(s.ansilume && { ansilume: true, url: s.url }),
   ...(s.clearance && { clearance: s.clearance }),
 }));
