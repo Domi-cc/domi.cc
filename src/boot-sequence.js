@@ -1,9 +1,9 @@
 import { typewrite } from './typewriter.js';
 
 const LINES = [
-  '$ ansible-playbook dominik.yml',
+  '$ ansible-playbook domi.yml',
   '',
-  'PLAY [dominik.cc] ***********************************************',
+  'PLAY [domi.cc] **************************************************',
   '',
   'TASK [systemd : boot] =========================================== ok',
   'TASK [networking : connect internet] ============================ ok',
@@ -12,7 +12,7 @@ const LINES = [
   'TASK [delivery : ship and hand over cleanly] ==================== ok',
   '',
   'PLAY RECAP ******************************************************',
-  'dominik.cc : ok=42 changed=17 unreachable=0 failed=0',
+  'domi.cc : ok=42 changed=17 unreachable=0 failed=0',
   '',
 ];
 
