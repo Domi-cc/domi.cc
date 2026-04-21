@@ -305,6 +305,18 @@
   }
 }
 
+@layer components {
+  .portrait picture {
+    --reveal: 0;
+    filter: grayscale(calc(100% - 100% * var(--reveal)))
+            contrast(calc(1.1 - 0.1 * var(--reveal)));
+  }
+  .portrait picture::after {
+    opacity: calc(1 - var(--reveal));
+    transition: opacity .15s linear;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important; transition-duration: .01ms !important;

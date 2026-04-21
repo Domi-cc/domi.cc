@@ -60,6 +60,8 @@ async function init() {
   const { initSkillMatrixAnimation } = await import('./skill-matrix.js');
   initSkillMatrixAnimation(document);
   initWhoamiFor(getInitialLang());
+  const { initPortraitReveal } = await import('./portrait-reveal.js');
+  initPortraitReveal(document.querySelector('.portrait'));
 }
 
 if (document.readyState === 'loading') {
