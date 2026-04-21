@@ -2,30 +2,30 @@ export const content = {
   de: {
     meta: {
       title: 'Dominik Haßelkuss — Problemlöser. Optimierer. Macher.',
-      description: 'Senior DevOps & Interim-CTO. DACH-weit. SÜ1, ready for SÜ2.',
+      description: 'Senior Security & Sec-DevOps Engineer. DACH-weit. SÜ1, ready für SÜ2.',
     },
     hero: {
       name: 'Dominik Haßelkuss',
       tagline: 'Problemlöser. Optimierer. Macher.',
-      oneLiner: 'Senior DevOps & Interim-CTO · DACH',
+      oneLiner: 'Senior Security & Sec-DevOps Engineer · DACH',
       trustBadge: 'SÜ1 · ready for SÜ2',
       scrollHint: 'scroll',
     },
     manifesto: {
       heading: 'Was ich tue',
       paragraphs: [
-        'Ich baue, härte und automatisiere Infrastrukturen, auf die sich große Unternehmen verlassen müssen.',
-        'Ich führe Teams, übernehme Interim-Verantwortung und übergebe sauber wenn der Laden läuft.',
-        'Wenn es dringend ist und niemand mehr weiterweiß — hol mich.',
+        'Ich härte, baue und automatisiere Infrastrukturen, auf die sich große Unternehmen verlassen müssen.',
+        'Security ist Haltung, nicht Feature: CIS-Baselines, SIEM-Anbindung, saubere Log-Pipelines, hardened Rollouts — Ende-zu-Ende.',
+        'SÜ1 durchlaufen, ready für SÜ2. Wenn es dringend ist und niemand mehr weiterweiß — hol mich.',
       ],
     },
     services: {
       heading: 'Was ich liefere',
       cards: [
+        { title: 'Security & Hardening', body: 'CIS-Hardening für OS, SSH, Apache. SIEM-Anbindung, SecOps, Incident-Vorbereitung. Log-Pipelines mit rsyslog, Loki, Grafana. Threat Intelligence. SÜ1 durchlaufen — ready für SÜ2.' },
         { title: 'Monitoring & Observability', body: 'Prometheus, Grafana, Loki, Icinga, Splunk — vom Greenfield-Stack bis zur HA-Migration bestehender Landschaften.' },
         { title: 'Automation & IaC', body: 'Ansible end-to-end: Rollout, Hardening, On-/Offboarding. Pipelines in GitLab. Schulung inklusive.' },
-        { title: 'Security & Hardening', body: 'CIS-Hardening, SSH/Apache/OS-Baselines, SIEM-Anbindung, Log-Pipelines. SÜ1, bereit für SÜ2.' },
-        { title: 'Leadership & Interim', body: 'CTO-Rolle auf Zeit. Team-Aufbau, Demand- und Backlog-Management, saubere Übergabe.' },
+        { title: 'Interim & Führung', body: 'Interim-Verantwortung auf Zeit, Team-Aufbau, saubere Übergabe. Wenn ein Projekt nur mit einem Kopf oben läuft.' },
       ],
     },
     ansilume: {
@@ -38,9 +38,9 @@ export const content = {
     skills: {
       heading: 'Skill-Matrix',
       categories: [
+        { name: 'Security & Hardening', highlight: true, items: ['SÜ1 · ready for SÜ2', 'CIS-Hardening', 'OS/SSH/Apache Hardening', 'SIEM', 'Splunk Enterprise', 'Rapid7', 'LogRhythm', 'Threat Intelligence', 'ISO 27001', 'BSI-Pentest', 'SecOps', 'Incident Preparation'] },
         { name: 'Automation & IaC', highlight: true, items: ['Ansible (+ ansilume)', 'Ansible AWX/Tower', 'Semaphore', 'GitLab CI/CD', 'Bash', 'Python3', 'Terraform (PoC)'] },
         { name: 'Monitoring & Observability', items: ['Prometheus', 'Grafana', 'Loki', 'Promtail', 'Thanos', 'Tempo', 'Icinga2', 'Nagios', 'Centreon', 'Zabbix', 'CheckMK', 'Splunk', 'ELK', 'Site24x7', 'Selenium'] },
-        { name: 'Security', items: ['SIEM', 'Splunk Enterprise', 'Rapid7', 'LogRhythm', 'Kaspersky', 'CIS-Hardening', 'ISO 27001', 'Threat Intelligence', 'BSI-Pentest'] },
         { name: 'Cloud & Container', items: ['AWS (EC2/S3/RDS/Lambda/CF)', 'Azure', 'Docker', 'Podman', 'Kubernetes', 'OpenShift', 'Red Hat Satellite'] },
         { name: 'Infrastruktur & OS', items: ['Debian', 'Ubuntu', 'RHEL', 'CentOS', 'Linux Hardening', 'SSH/Apache Hardening', 'rsyslog', 'keepalived', 'HAproxy', 'SSL-Rollout'] },
         { name: 'Virtualisierung', items: ['Proxmox', 'ESX', 'VMware', 'KVM'] },
@@ -92,30 +92,30 @@ export const content = {
   en: {
     meta: {
       title: 'Dominik Haßelkuss — Problem solver. Optimiser. Doer.',
-      description: 'Senior DevOps & Interim CTO. DACH-wide. SÜ1 cleared, ready for SÜ2.',
+      description: 'Senior Security & Sec-DevOps Engineer. DACH-wide. SÜ1 cleared, ready for SÜ2.',
     },
     hero: {
       name: 'Dominik Haßelkuss',
       tagline: 'Problem solver. Optimiser. Doer.',
-      oneLiner: 'Senior DevOps & Interim CTO · DACH',
+      oneLiner: 'Senior Security & Sec-DevOps Engineer · DACH',
       trustBadge: 'SÜ1 · ready for SÜ2',
       scrollHint: 'scroll',
     },
     manifesto: {
       heading: 'What I do',
       paragraphs: [
-        'I build, harden and automate the infrastructure that large organisations depend on.',
-        'I lead teams, take interim responsibility, and hand over cleanly once the shop runs.',
-        'When it is urgent and no one else can figure it out — call me.',
+        'I harden, build and automate the infrastructure that large organisations depend on.',
+        'Security is posture, not a feature: CIS baselines, SIEM integration, clean log pipelines, hardened rollouts — end to end.',
+        'SÜ1 cleared, ready for SÜ2. When it is urgent and no one else can figure it out — call me.',
       ],
     },
     services: {
       heading: 'What I deliver',
       cards: [
-        { title: 'Monitoring & Observability', body: 'Prometheus, Grafana, Loki, Icinga, Splunk — from greenfield stacks to HA-migrations of legacy estates.' },
+        { title: 'Security & Hardening', body: 'CIS hardening for OS, SSH, Apache. SIEM integration, SecOps, incident prep. Log pipelines with rsyslog, Loki, Grafana. Threat intelligence. SÜ1 cleared — ready for SÜ2.' },
+        { title: 'Monitoring & Observability', body: 'Prometheus, Grafana, Loki, Icinga, Splunk — from greenfield stacks to HA migrations of legacy estates.' },
         { title: 'Automation & IaC', body: 'Ansible end-to-end: rollout, hardening, on-/offboarding. GitLab pipelines. Training included.' },
-        { title: 'Security & Hardening', body: 'CIS hardening, SSH/Apache/OS baselines, SIEM wiring, log pipelines. SÜ1, ready for SÜ2.' },
-        { title: 'Leadership & Interim', body: 'Fractional CTO on demand. Team build-up, demand and backlog management, clean handover.' },
+        { title: 'Interim & Leadership', body: 'Interim responsibility, team build-up, clean handover. For projects that only run with a head on top.' },
       ],
     },
     ansilume: {
@@ -128,9 +128,9 @@ export const content = {
     skills: {
       heading: 'Skill matrix',
       categories: [
+        { name: 'Security & Hardening', highlight: true, items: ['SÜ1 · ready for SÜ2', 'CIS hardening', 'OS/SSH/Apache hardening', 'SIEM', 'Splunk Enterprise', 'Rapid7', 'LogRhythm', 'Threat Intelligence', 'ISO 27001', 'BSI pentest', 'SecOps', 'Incident Preparation'] },
         { name: 'Automation & IaC', highlight: true, items: ['Ansible (+ ansilume)', 'Ansible AWX/Tower', 'Semaphore', 'GitLab CI/CD', 'Bash', 'Python3', 'Terraform (PoC)'] },
         { name: 'Monitoring & Observability', items: ['Prometheus', 'Grafana', 'Loki', 'Promtail', 'Thanos', 'Tempo', 'Icinga2', 'Nagios', 'Centreon', 'Zabbix', 'CheckMK', 'Splunk', 'ELK', 'Site24x7', 'Selenium'] },
-        { name: 'Security', items: ['SIEM', 'Splunk Enterprise', 'Rapid7', 'LogRhythm', 'Kaspersky', 'CIS hardening', 'ISO 27001', 'Threat Intelligence', 'BSI pentest'] },
         { name: 'Cloud & Container', items: ['AWS (EC2/S3/RDS/Lambda/CF)', 'Azure', 'Docker', 'Podman', 'Kubernetes', 'OpenShift', 'Red Hat Satellite'] },
         { name: 'Infrastructure & OS', items: ['Debian', 'Ubuntu', 'RHEL', 'CentOS', 'Linux hardening', 'SSH/Apache hardening', 'rsyslog', 'keepalived', 'HAproxy', 'SSL rollout'] },
         { name: 'Virtualisation', items: ['Proxmox', 'ESX', 'VMware', 'KVM'] },

@@ -301,11 +301,43 @@
   .footer-meta a:hover { color: var(--amber); }
 
   #bg-ascii {
-    position: fixed; inset: 0; z-index: 0; opacity: .18; pointer-events: none;
-    font-family: var(--font-mono); font-size: clamp(7px, 1.2vh, 12px);
-    line-height: 1; letter-spacing: 0; color: var(--cyan);
-    margin: 0; padding: 0; overflow: hidden; white-space: pre;
-    display: block;
+    position: fixed; inset: 0; z-index: 0;
+    pointer-events: none; overflow: hidden;
+    display: grid; place-items: center;
+  }
+  #bg-ascii pre {
+    margin: 0; white-space: pre;
+    font-family: var(--font-mono);
+    font-size: clamp(8px, 1.8vmin, 22px);
+    line-height: 1;
+    color: var(--cyan);
+    opacity: .18;
+    text-shadow: 0 0 22px rgba(125, 252, 205, 0.22);
+    animation: tux-breath 5.5s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+  @keyframes tux-breath {
+    0%, 100% { transform: scale(1) rotateY(-2deg); opacity: .18; }
+    50%      { transform: scale(1.03) rotateY(2deg); opacity: .24; }
+  }
+
+  .hero-trust {
+    font-size: 1rem;
+    padding: .55rem 1rem;
+    box-shadow: 0 0 28px rgba(255,179,71,.1);
+    animation: trust-pulse 3.5s ease-in-out infinite;
+  }
+  @keyframes trust-pulse {
+    0%, 100% { box-shadow: 0 0 22px rgba(255,179,71,.12); }
+    50%      { box-shadow: 0 0 40px rgba(255,179,71,.28); }
+  }
+
+  .services-grid > article:first-child {
+    border-left: 2px solid var(--amber);
+    box-shadow: inset 0 0 40px rgba(255,179,71,.04);
+  }
+  .services-grid > article:first-child h3 {
+    color: var(--amber);
   }
 }
 
@@ -384,22 +416,6 @@
     will-change: transform;
   }
 
-  .ascii-self {
-    display: grid; place-items: center;
-    min-height: 100vh; padding: var(--gutter);
-    perspective: 1000px;
-  }
-  #ascii-portrait {
-    font-family: var(--font-mono);
-    font-size: clamp(6px, 0.95vh, 11px);
-    line-height: 1;
-    letter-spacing: 0.02em;
-    color: var(--fg);
-    margin: 0;
-    white-space: pre;
-    text-shadow: 0 0 18px rgba(125, 252, 205, 0.22);
-    transform: rotateX(4deg);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

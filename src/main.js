@@ -60,19 +60,8 @@ async function init() {
   if (term && body) playBootSequence(term, body).catch(console.error);
   const { initSkillMatrixAnimation } = await import('./skill-matrix.js');
   initSkillMatrixAnimation(document);
-  initWhoamiFor(getInitialLang());
   const { initPortraitReveal } = await import('./portrait-reveal.js');
   initPortraitReveal(document.querySelector('.portrait'));
-  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const { initAsciiDonut } = await import('./ascii-donut.js');
-    initAsciiDonut(document.getElementById('bg-ascii'));
-  }
-  const { initAsciiSelf } = await import('./ascii-self.js');
-  initAsciiSelf(
-    document.getElementById('ascii-portrait'),
-    document.getElementById('ascii-self'),
-    'assets/portrait-768.webp'
-  );
   const { initScrollFX } = await import('./scroll-fx.js');
   initScrollFX(document);
   const { initSmoothScroll } = await import('./smooth-scroll.js');
