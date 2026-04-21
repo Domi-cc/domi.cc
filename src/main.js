@@ -62,6 +62,10 @@ async function init() {
   initWhoamiFor(getInitialLang());
   const { initPortraitReveal } = await import('./portrait-reveal.js');
   initPortraitReveal(document.querySelector('.portrait'));
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const { initCanvasGraph } = await import('./canvas-graph.js');
+    initCanvasGraph(document.getElementById('bg-graph'));
+  }
 }
 
 if (document.readyState === 'loading') {
