@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title data-i18n="meta.title">Dominik Haßelkuss</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preload" href="assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/JetBrainsMono-Variable.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<canvas id="bg-graph" aria-hidden="true"></canvas>
+
+<nav class="lang-toggle">
+  <button type="button" data-lang="de" aria-pressed="true">DE</button>
+  <span aria-hidden="true">/</span>
+  <button type="button" data-lang="en" aria-pressed="false">EN</button>
+</nav>
+
+<aside class="hud" aria-live="off">
+  <span class="hud-label">uptime</span>
+  <span class="hud-value" id="uptime">0y 0mo 0d 0h 0m 0s</span>
+</aside>
+
+<header class="hero">
+  <pre class="boot-terminal" id="boot-terminal" aria-hidden="true"></pre>
+  <div class="hero-body" hidden>
+    <h1 class="hero-name" data-i18n="hero.name">Dominik Haßelkuss</h1>
+    <p class="hero-tagline" data-i18n="hero.tagline">Problemlöser. Optimierer. Macher.</p>
+    <p class="hero-oneliner" data-i18n="hero.oneLiner"></p>
+    <p class="hero-trust" data-i18n="hero.trustBadge">SÜ1 · ready for SÜ2</p>
+    <span class="hero-scroll" data-i18n="hero.scrollHint">scroll</span>
+  </div>
+</header>
+
+<section class="manifesto">
+  <h2 data-i18n="manifesto.heading"></h2>
+  <div data-render="manifesto-paragraphs"></div>
+</section>
+
+<section class="services">
+  <h2 data-i18n="services.heading"></h2>
+  <div class="services-grid" data-render="services-cards"></div>
+</section>
+
+<section class="ansilume" id="ansilume">
+  <span class="ansilume-kicker" data-i18n="ansilume.kicker"></span>
+  <h2 class="ansilume-logo" data-i18n="ansilume.heading"></h2>
+  <p data-i18n="ansilume.body"></p>
+  <a class="ansilume-cta" data-render="ansilume-link" href="#" target="_blank" rel="noopener"></a>
+</section>
+
+<section class="portrait">
+  <picture>
+    <source srcset="assets/portrait-480.webp 480w, assets/portrait-768.webp 768w, assets/portrait-1280.webp 1280w" type="image/webp" />
+    <img src="assets/portrait.jpg" alt="Dominik Haßelkuss" width="768" height="1152" loading="lazy" />
+  </picture>
+</section>
+
+<section class="skills">
+  <h2 data-i18n="skills.heading"></h2>
+  <div data-render="skills-matrix"></div>
+</section>
+
+<section class="timeline">
+  <h2 data-i18n="timelineMeta.heading"></h2>
+  <p class="timeline-note" data-i18n="timelineMeta.note"></p>
+  <ol data-render="timeline-list"></ol>
+</section>
+
+<section class="leadership">
+  <h2 data-i18n="leadership.heading"></h2>
+  <ul data-render="leadership-bullets"></ul>
+</section>
+
+<section class="awards">
+  <h2 data-i18n="awards.heading"></h2>
+  <ul data-render="awards-list"></ul>
+</section>
+
+<section class="about">
+  <dl>
+    <dt>Education</dt><dd data-i18n="footer.education"></dd>
+    <dt>Languages</dt><dd data-i18n="footer.languages"></dd>
+    <dt>Volunteer</dt><dd data-i18n="footer.volunteer"></dd>
+  </dl>
+</section>
+
+<footer class="site-footer">
+  <pre class="whoami"><span class="whoami-prompt" data-i18n="footer.whoami"></span><span class="whoami-out" id="whoami-out"></span></pre>
+  <div class="footer-meta">
+    <a href="impressum.html" data-i18n="footer.imprint"></a>
+    <span id="copy"></span>
+  </div>
+</footer>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
