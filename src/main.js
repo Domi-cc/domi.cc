@@ -26,6 +26,8 @@ function setLang(lang) {
     const value = path.split('.').reduce((acc, k) => acc?.[k], content[lang]);
     if (typeof value === 'string') el.setAttribute(attr, value);
   });
+  import('./skill-matrix.js').then(({ initSkillMatrixAnimation }) => initSkillMatrixAnimation(document));
+  initWhoamiFor(lang);
 }
 
 function initLangToggle() {
@@ -34,9 +36,30 @@ function initLangToggle() {
   });
 }
 
-function init() {
+async function initWhoamiFor(lang) {
+  const { initWhoami } = await import('./whoami-footer.js');
+  const out = document.getElementById('whoami-out');
+  if (out) {
+    out.textContent = '';
+    initWhoami(out, content[lang].footer.whoamiLines);
+  }
+}
+
+async function init() {
   setLang(getInitialLang());
   initLangToggle();
+  const hud = document.getElementById('uptime');
+  if (hud) {
+    const { startUptimeHUD } = await import('./uptime-hud.js');
+    startUptimeHUD(hud);
+  }
+  const { playBootSequence } = await import('./boot-sequence.js');
+  const term = document.getElementById('boot-terminal');
+  const body = document.querySelector('.hero-body');
+  if (term && body) playBootSequence(term, body).catch(console.error);
+  const { initSkillMatrixAnimation } = await import('./skill-matrix.js');
+  initSkillMatrixAnimation(document);
+  initWhoamiFor(getInitialLang());
 }
 
 if (document.readyState === 'loading') {
