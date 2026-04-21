@@ -1,0 +1,70 @@
+@layer reset, tokens, base, components, utilities;
+
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  img, svg, video, canvas { display: block; max-width: 100%; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  a { color: inherit; }
+  ol, ul { padding: 0; margin: 0; list-style: none; }
+}
+
+@layer tokens {
+  :root {
+    --bg: #0a0e14;
+    --fg: #e6edf3;
+    --fg-dim: #9ba4b0;
+    --line: #1f2732;
+    --line-2: #3a4553;
+    --amber: #ffb347;
+    --cyan: #7dfccd;
+
+    --font-sans: "Inter", "Inter Variable", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", "JetBrains Mono Variable", ui-monospace, monospace;
+
+    --measure: 68ch;
+    --gutter: clamp(1rem, 4vw, 3rem);
+    --step-0: clamp(0.9rem, 0.85rem + 0.2vw, 1rem);
+    --step-1: clamp(1rem,  0.92rem + 0.4vw, 1.125rem);
+    --step-2: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    --step-3: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+    --step-4: clamp(2.5rem, 1.5rem + 5vw, 5rem);
+    --step-5: clamp(3.5rem, 2rem + 8vw, 8rem);
+  }
+
+  @font-face {
+    font-family: 'Inter Variable';
+    src: url('assets/fonts/Inter-Variable.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'JetBrains Mono Variable';
+    src: url('assets/fonts/JetBrainsMono-Variable.woff2') format('woff2-variations');
+    font-weight: 100 800;
+    font-display: swap;
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: var(--step-1);
+    line-height: 1.55;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9  0 0 0 0 0.93  0 0 0 0 0.95  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    pointer-events: none; opacity: .5; z-index: 1; mix-blend-mode: overlay;
+  }
+  section { padding: clamp(4rem, 10vw, 8rem) var(--gutter); position: relative; z-index: 2; }
+  h1, h2, h3 { font-weight: 500; letter-spacing: -0.02em; margin: 0 0 1rem; }
+  h2 { font-size: var(--step-3); color: var(--fg); border-top: 1px solid var(--line); padding-top: 1.5rem; }
+  p { margin: 0 0 1rem; max-width: var(--measure); color: var(--fg-dim); }
+}
