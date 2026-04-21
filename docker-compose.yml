@@ -1,0 +1,27 @@
+services:
+  app:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+      - npm_cache:/root/.npm
+    ports:
+      - "1337:1337"
+    command: sh -c "npm install --no-fund --no-audit && npm run dev"
+    init: true
+
+  test:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+      - npm_cache:/root/.npm
+    command: sh -c "npm install --no-fund --no-audit && npm test"
+    profiles: ["test"]
+    init: true
+
+volumes:
+  node_modules:
+  npm_cache:

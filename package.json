@@ -1,0 +1,16 @@
+{
+  "name": "domi-cc",
+  "private": true,
+  "type": "module",
+  "description": "Static consultant site for domi.cc",
+  "scripts": {
+    "dev": "serve -l 1337 -n .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0",
+    "jsdom": "^24.0.0",
+    "serve": "^14.2.4"
+  }
+}

@@ -1,3 +1,14 @@
 
 #IDE: PHPStorm
 .idea/
+
+# Node / Vitest (should never exist on host, but just in case)
+node_modules/
+package-lock.json
+.DS_Store
+.vscode/
+*.log
+
+# Source assets / local files not meant for web
+CV DH.md
+4X8A0833_be.jpg
