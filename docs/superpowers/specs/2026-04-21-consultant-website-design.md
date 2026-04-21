@@ -32,7 +32,7 @@
 1. **Hero — Boot-Sequenz**
    - Schwarzer Viewport. `ansible-playbook dominik.yml` läuft typewriter-mäßig durch: PLAYBOOK-Header, 6–8 TASK-Zeilen mit `ok: [dominik.cc]`, finale `PLAY RECAP ok=N changed=N failed=0`.
    - Terminal fadet aus, Name **„Dominik Haßelkuss"** erscheint groß mittig, Tagline darunter, One-Liner darunter.
-   - Oben rechts permanent: HUD-Uptime-Counter `uptime: XXy XXm XXd` — live incrementing, gerechnet ab Berufsbeginn 2007 (THW/Young Solutions). Unauffällig, Monospace.
+   - Oben rechts permanent: HUD-Uptime-Counter `uptime: XXy XXm XXd XXh XXm XXs` — live incrementing, gerechnet ab Geburtsdatum `1988-01-27 00:00 Europe/Berlin` (Dominik als eigener „Host" seit Boot). Unauffällig, Monospace.
    - Unten Scroll-Hinweis als blinkender Cursor `▊`.
 
 2. **Positionierung / Manifest**
@@ -88,7 +88,7 @@
 | Effekt | Umsetzung |
 |---|---|
 | Boot-Sequenz Hero | Typewriter via JS, feste Zeilen, ~1.8s Gesamtdauer. Skip-Option nach 1. User-Scroll. |
-| Uptime-HUD | `setInterval` alle 1s, Differenz zu `2005-06-01` (Start erste Engineering-Rolle, Young Solutions AG laut CV). |
+| Uptime-HUD | `setInterval` alle 1s, Differenz zu `1988-01-27T00:00:00+01:00` (Geburtsdatum = Boot-Zeitpunkt). Format: `uptime: Ny Nmo Nd Nh Nm Ns`. |
 | Skill-Matrix Ansible-Run-Animation | IntersectionObserver triggert typewriter pro Zeile. |
 | Portrait-Reveal | Zwei Bilder übereinander: Duotone Graphit/Amber (CSS `filter` + `mix-blend-mode`) und Original. Scroll-Progress blendet per `clip-path` um. CRT-Scanlines als `::after` overlay. |
 | Network-Graph Hintergrund | Canvas 2D, 30–50 Nodes, Spring-Force-Layout, sehr langsam. Nodes leicht attraktiert zum Cursor (subtil, nicht aggressiv). Opazität max 0.25. |
