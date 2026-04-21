@@ -66,6 +66,8 @@ async function init() {
     const { initCanvasGraph } = await import('./canvas-graph.js');
     initCanvasGraph(document.getElementById('bg-graph'));
   }
+  const { initSmoothScroll } = await import('./smooth-scroll.js');
+  initSmoothScroll();
 }
 
 if (document.readyState === 'loading') {
