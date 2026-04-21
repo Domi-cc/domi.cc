@@ -7,12 +7,14 @@ const LINES = [
   '',
   'TASK [systemd : boot] =========================================== ok',
   'TASK [networking : connect internet] ============================ ok',
+  'TASK [os : ensure linux installed] ============================== ok',
+  'TASK [os : remove windows] ================================ SKIPPED (keine fenster hier)',
   'TASK [skills : install 20+ years experience] ==================== ok',
   'TASK [security : cleared SÜ1, ready for SÜ2] ==================== ok',
   'TASK [delivery : ship and hand over cleanly] ==================== ok',
   '',
   'PLAY RECAP ******************************************************',
-  'domi.cc : ok=42 changed=17 unreachable=0 failed=0',
+  'domi.cc : ok=42 changed=17 unreachable=0 failed=0 windows=0',
   '',
 ];
 
@@ -22,7 +24,7 @@ export async function playBootSequence(terminalEl, heroBodyEl) {
     const span = document.createElement('span');
     terminalEl.appendChild(span);
     terminalEl.appendChild(document.createTextNode('\n'));
-    if (line) await typewrite(span, line, { speed: 8 });
+    if (line) await typewrite(span, line, { speed: 14 });
     else span.textContent = '';
   }
   await wait(600);

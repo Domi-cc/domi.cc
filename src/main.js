@@ -27,6 +27,7 @@ function setLang(lang) {
     if (typeof value === 'string') el.setAttribute(attr, value);
   });
   import('./skill-matrix.js').then(({ initSkillMatrixAnimation }) => initSkillMatrixAnimation(document));
+  import('./scroll-fx.js').then(({ initScrollFX }) => initScrollFX(document));
   initWhoamiFor(lang);
 }
 
@@ -63,9 +64,17 @@ async function init() {
   const { initPortraitReveal } = await import('./portrait-reveal.js');
   initPortraitReveal(document.querySelector('.portrait'));
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const { initCanvasGraph } = await import('./canvas-graph.js');
-    initCanvasGraph(document.getElementById('bg-graph'));
+    const { initAsciiDonut } = await import('./ascii-donut.js');
+    initAsciiDonut(document.getElementById('bg-ascii'));
   }
+  const { initAsciiSelf } = await import('./ascii-self.js');
+  initAsciiSelf(
+    document.getElementById('ascii-portrait'),
+    document.getElementById('ascii-self'),
+    'assets/portrait-768.webp'
+  );
+  const { initScrollFX } = await import('./scroll-fx.js');
+  initScrollFX(document);
   const { initSmoothScroll } = await import('./smooth-scroll.js');
   initSmoothScroll();
 }

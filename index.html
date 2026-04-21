@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<!--
+
+                  .--.
+                 |o_o |
+                 |:_/ |
+                //   \ \
+               (|     | )
+              /'\_   _/`\
+              \___)=(___/
+
+           Tux lebt. Keine Fenster hier.
+           — Dominik Haßelkuss
+-->
 <html lang="de">
 <head>
 <meta charset="utf-8" />
@@ -11,7 +24,7 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<canvas id="bg-graph" aria-hidden="true"></canvas>
+<pre id="bg-ascii" aria-hidden="true"></pre>
 
 <nav class="lang-toggle">
   <button type="button" data-lang="de" aria-pressed="true">DE</button>
@@ -57,6 +70,10 @@
     <source srcset="assets/portrait-480.webp 480w, assets/portrait-768.webp 768w, assets/portrait-1280.webp 1280w" type="image/webp" />
     <img src="assets/portrait.jpg" alt="Dominik Haßelkuss" width="768" height="1152" loading="lazy" />
   </picture>
+</section>
+
+<section class="ascii-self" id="ascii-self">
+  <pre id="ascii-portrait" aria-hidden="true"></pre>
 </section>
 
 <section class="skills">
