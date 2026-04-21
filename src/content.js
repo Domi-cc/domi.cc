@@ -6,6 +6,7 @@ export const content = {
     },
     hero: {
       name: 'Dominik Haßelkuss',
+      pronunciation: '/ˈhasəlˌkʊs/  ← ganz normal, wie „Hasselkuss"',
       tagline: 'Problemlöser. Optimierer. Macher.',
       oneLiner: 'Senior Security & Sec-DevOps Engineer · DACH',
       trustBadge: 'SÜ1 · ready for SÜ2',
@@ -96,6 +97,7 @@ export const content = {
     },
     hero: {
       name: 'Dominik Haßelkuss',
+      pronunciation: '/ˈhasəlˌkʊs/  ← just say "Hasselkuss"',
       tagline: 'Problem solver. Optimiser. Doer.',
       oneLiner: 'Senior Security & Sec-DevOps Engineer · DACH',
       trustBadge: 'SÜ1 · ready for SÜ2',
