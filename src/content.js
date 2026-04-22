@@ -185,6 +185,24 @@ export const content = {
 
 const STATIONS = [
   {
+    clearance: 'SÜ1',
+    role: { de: 'System Engineer Monitoring', en: 'System Engineer Monitoring' },
+    industry: { de: 'Landesbehörde (Justiz)', en: 'State authority (judiciary)' },
+    highlights: {
+      de: [
+        'Centreon-Reorganisation und API-Setup für Ansible',
+        'Contribution ins offizielle 1Password-Ansible-Modul',
+        'HA-Zabbix-Cluster konzipiert und aufgebaut',
+      ],
+      en: [
+        'Centreon reorganisation and API setup for Ansible',
+        'Contribution to the official 1Password Ansible module',
+        'HA Zabbix cluster designed and built',
+      ],
+    },
+    stack: ['Centreon', 'Ansible', 'Zabbix', 'Nagios', 'Icinga', 'Grafana', 'RHEL'],
+  },
+  {
     ansilume: true,
     url: 'https://github.com/ansilume/ansilume',
     role: { de: 'DevOps & Automation Engineer', en: 'DevOps & Automation Engineer' },
@@ -211,24 +229,6 @@ const STATIONS = [
       ],
     },
     stack: ['Ansible', 'GitLab', 'Prometheus', 'Loki', 'Grafana', 'rsyslog', 'Kaspersky', 'Rapid7', 'Proxmox'],
-  },
-  {
-    clearance: 'SÜ1',
-    role: { de: 'System Engineer Monitoring', en: 'System Engineer Monitoring' },
-    industry: { de: 'Landesbehörde (Justiz)', en: 'State authority (judiciary)' },
-    highlights: {
-      de: [
-        'Centreon-Reorganisation und API-Setup für Ansible',
-        'Contribution ins offizielle 1Password-Ansible-Modul',
-        'HA-Zabbix-Cluster konzipiert und aufgebaut',
-      ],
-      en: [
-        'Centreon reorganisation and API setup for Ansible',
-        'Contribution to the official 1Password Ansible module',
-        'HA Zabbix cluster designed and built',
-      ],
-    },
-    stack: ['Centreon', 'Ansible', 'Zabbix', 'Nagios', 'Icinga', 'Grafana', 'RHEL'],
   },
   {
     role: { de: 'SecDevOps', en: 'SecDevOps' },
