@@ -2,13 +2,13 @@ export const content = {
   de: {
     meta: {
       title: 'Dominik Haßelkuss — Problemlöser. Optimierer. Macher.',
-      description: 'Senior Security & Sec-DevOps Engineer. DACH-weit. SÜ1, ready für SÜ2.',
+      description: 'Senior Security & Sec-DevOps Engineer. National & international. SÜ1, ready für SÜ2.',
     },
     hero: {
       name: 'Dominik Haßelkuss',
       pronunciation: '/ˈhasəlˌkʊs/  ← ganz normal, wie „Hasselkuss"',
       tagline: 'Problemlöser. Optimierer. Macher.',
-      oneLiner: 'Senior Security & Sec-DevOps Engineer · DACH',
+      oneLiner: 'Senior Security & Sec-DevOps Engineer · national & international',
       trustBadge: 'SÜ1 · ready for SÜ2',
       scrollHint: 'scroll',
     },
@@ -93,13 +93,13 @@ export const content = {
   en: {
     meta: {
       title: 'Dominik Haßelkuss — Problem solver. Optimiser. Doer.',
-      description: 'Senior Security & Sec-DevOps Engineer. DACH-wide. SÜ1 cleared, ready for SÜ2.',
+      description: 'Senior Security & Sec-DevOps Engineer. National & international. SÜ1 cleared, ready for SÜ2.',
     },
     hero: {
       name: 'Dominik Haßelkuss',
       pronunciation: '/ˈhasəlˌkʊs/  ← just say "Hasselkuss"',
       tagline: 'Problem solver. Optimiser. Doer.',
-      oneLiner: 'Senior Security & Sec-DevOps Engineer · DACH',
+      oneLiner: 'Senior Security & Sec-DevOps Engineer · national & international',
       trustBadge: 'SÜ1 · ready for SÜ2',
       scrollHint: 'scroll',
     },
