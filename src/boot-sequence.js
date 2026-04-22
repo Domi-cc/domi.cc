@@ -8,6 +8,7 @@ const LINES = [
   'TASK [systemd : boot] =========================================== ok',
   'TASK [networking : connect internet] ============================ ok',
   'TASK [os : ensure linux installed] ============================== ok',
+  'TASK [os : remove windows] ================================ SKIPPED',
   'TASK [skills : install 20+ years experience] ==================== ok',
   'TASK [security : cleared SÜ1, ready for SÜ2] ==================== ok',
   'TASK [delivery : ship and hand over cleanly] ==================== ok',
